@@ -356,6 +356,23 @@ function setupCopyButtons() {
   });
 }
 
+// ---------- Modales de datos bancarios (página de donación) ----------
+function setupModals() {
+  document.querySelectorAll('[data-modal]').forEach(function (btn) {
+    var modal = document.getElementById(btn.dataset.modal);
+    btn.addEventListener('click', function () { modal.showModal(); });
+  });
+  document.querySelectorAll('.modal').forEach(function (modal) {
+    modal.querySelector('.modal-close').addEventListener('click', function () { modal.close(); });
+    // Clic afuera del cuadro: cierra
+    modal.addEventListener('click', function (e) {
+      var r = modal.getBoundingClientRect();
+      var outside = e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom;
+      if (outside) modal.close();
+    });
+  });
+}
+
 // ---------- Inicio ----------
 setupHeader();
 setupFontSize();
@@ -363,3 +380,4 @@ setupToTop();
 setupCarousel();
 setupContactForm();
 setupCopyButtons();
+setupModals();

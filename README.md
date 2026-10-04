@@ -4,7 +4,8 @@ Sitio simple en HTML, CSS y JavaScript (sin frameworks), con el diseño de la pr
 
 - `index.html` — home
 - `contacto.html` — página de contacto con formulario
-- `donar.html` — página de donación: quiénes somos, actividades y formas de donar
+- `donar.html` — página de donación: fotos de actividades y formas de donar (transferencia y depósito abren un modal)
+- `img/` — ilustraciones provisorias de actividades (reemplazar por fotos reales)
 - `styles.css` — estilos
 - `script.js` — menú, tamaño de letra, carrusel, volver arriba y formulario
 
