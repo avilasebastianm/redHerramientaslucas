@@ -417,8 +417,9 @@ a { color: inherit; }
 /* ---------- Quiénes somos (mini sección) ---------- */
 
 .about {
+  padding: 36px 0 8px;
   text-align: center;
-  padding: 8px 0 0;
+  background: var(--white);
 }
 .about p {
   max-width: 820px;
@@ -433,7 +434,7 @@ a { color: inherit; }
 }
 .about-link:hover { text-decoration: underline; }
 
-/* ---------- Espacio de Actividades (ejes): justo debajo del carrusel, estilo de la propuesta de Sebastián ---------- */
+/* ---------- Espacio de Actividades (ejes): debajo de Quiénes somos, estilo de la propuesta de Sebastián ---------- */
 
 .activities {
   padding: 48px 0;
