@@ -338,9 +338,28 @@ function setupContactForm() {
   });
 }
 
+// ---------- Copiar datos bancarios (página de donación) ----------
+function setupCopyButtons() {
+  document.querySelectorAll('.copy-btn').forEach(function (btn) {
+    var value = document.querySelector('[data-value="' + btn.dataset.copy + '"]');
+    // Mientras el dato no esté cargado, no se muestra el botón
+    if (!value || value.classList.contains('pending')) {
+      btn.hidden = true;
+      return;
+    }
+    btn.addEventListener('click', function () {
+      navigator.clipboard.writeText(value.textContent.trim()).then(function () {
+        btn.textContent = '¡Copiado!';
+        setTimeout(function () { btn.textContent = 'Copiar'; }, 2000);
+      });
+    });
+  });
+}
+
 // ---------- Inicio ----------
 setupHeader();
 setupFontSize();
 setupToTop();
 setupCarousel();
 setupContactForm();
+setupCopyButtons();
