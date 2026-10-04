@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Red de Herramientas Entre Mujeres</title>
+  <meta name="description" content="Asociación civil de mujeres adultas mayores dedicada a la lucha por la inclusión plena y el trato digno.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;900&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <!-- Header: logo + menú en la misma línea, fijo al hacer scroll -->
+  <header class="header">
+    <div class="header-inner">
+      <a class="logo" href="index.html"><img src="https://i.imgur.com/CFM0Pcr.png" alt="Red de Herramientas — Asociación Civil IGJ 1981600" width="264" height="60"></a>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#quienes-somos">Quiénes somos</a></li>
+          <li><a href="#actividades">Actividades</a></li>
+          <li><a href="#recursos">Recursos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-tools">
+        <div class="font-size">
+          <button class="icon-btn" type="button" aria-label="Tamaño de letra" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 4v3h5v12h3V7h5V4H9zm-6 8h3v7h3v-7h3V9H3v3z"/></svg>
+          </button>
+          <ul class="font-size-menu" hidden>
+            <li><button type="button" data-scale="0.85">Pequeña</button></li>
+            <li><button type="button" data-scale="1">Normal</button></li>
+            <li><button type="button" data-scale="1.15">Grande</button></li>
+            <li><button type="button" data-scale="1.3">Muy grande</button></li>
+          </ul>
+        </div>
+        <a class="whatsapp-btn" href="https://wa.me/5491122766776" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.9L2 22l5.25-1.38A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.3 15l-.3-.2-3.1.8.83-3-.2-.32A8.1 8.1 0 0 1 12.04 3.8zM8.6 7.5c-.2 0-.5.07-.75.35-.25.27-1 1-1 2.4s1.03 2.8 1.17 3c.15.2 2 3.2 4.9 4.36 2.4.95 2.9.76 3.4.72.52-.05 1.7-.7 1.93-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.2-.55-.34-.3-.15-1.7-.84-1.96-.94-.27-.1-.46-.15-.65.14-.2.3-.75.94-.9 1.13-.17.2-.33.22-.62.07-.3-.14-1.2-.44-2.3-1.4-.85-.76-1.42-1.7-1.6-1.98-.16-.3 0-.45.13-.6.14-.13.3-.34.44-.5.15-.17.2-.3.3-.5.1-.2.05-.36-.02-.5-.07-.15-.65-1.6-.9-2.17-.23-.55-.47-.48-.65-.49h-.55z"/></svg>
+        </a>
+        <button class="icon-btn menu-btn" type="button" aria-controls="nav" aria-expanded="false" aria-label="Menú">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- Carrusel de actividades: se llena con los posteos del blog (ver script.js) -->
+    <section class="carousel" id="inicio" aria-label="Actividades">
+      <div class="slides"></div>
+      <button class="carousel-arrow prev" type="button" aria-label="Anterior">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 3.5 15.7 1.7 5.4 12l10.3 10.3 1.8-1.8L9 12z"/></svg>
+      </button>
+      <button class="carousel-arrow next" type="button" aria-label="Siguiente">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.5 20.5 8.3 22.3 18.6 12 8.3 1.7 6.5 3.5 15 12z"/></svg>
+      </button>
+      <div class="dots"></div>
+    </section>
+
+    <div class="container">
+      <div class="separator"></div>
+
+      <!-- Quiénes somos -->
+      <section class="about" id="quienes-somos">
+        <h2 class="visually-hidden">Quiénes somos</h2>
+        <p>Somos una asociación civil constituida por mujeres adultas mayores que está dedicada a la lucha por la inclusión plena y el trato digno.</p>
+        <p>Desde una mirada federal, horizontal y profundamente antiviejista construimos proyectos y desarrollamos propuestas que derriban estereotipos y atienden vulnerabilidades sociales, económicas, culturales y de salud.</p>
+        <a class="about-link" href="https://www.redherramientas.com/p/quienes-somos.html">&gt;&gt; Quiénes somos</a>
+      </section>
+
+      <div class="separator"></div>
+
+      <!-- Espacio de Actividades (ejes) -->
+      <section class="activities" id="actividades">
+        <h2 class="section-title">Espacio de Actividades</h2>
+        <p class="activities-lead">Nuestros cuatro ejes de trabajo. Elegí uno y conocé todo lo que hacemos.</p>
+        <div class="ejes">
+          <a class="eje eje-salud" href="#pendiente-salud">
+            <svg class="eje-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm4 12h-3v3h-2v-3H8v-2h3V8h2v3h3v2z"/></svg>
+            <h3>Salud y Bienestar</h3>
+            <p>Actividad física y cuidado personal</p>
+            <span class="eje-more"><span>Ver actividades →</span></span>
+          </a>
+          <a class="eje eje-cultura" href="https://www.redherramientas.com/search/label/Cultura">
+            <svg class="eje-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3 1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+            <h3>Educación y Cultura</h3>
+            <p>Enredos de Película · #ClicSeguroEnRED</p>
+            <span class="eje-more"><span>Ver actividades →</span></span>
+          </a>
+          <a class="eje eje-derechos" href="https://www.redherramientas.com/search/label/Derecho%20a%20tener%20derechos">
+            <svg class="eje-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 7.83c.85-.3 1.53-.98 1.83-1.83H18l-3 7c0 1.66 1.57 3 3.5 3s3.5-1.34 3.5-3l-3-7h2V4h-6.17A2.99 2.99 0 0 0 12 2c-1.31 0-2.42.83-2.83 2H3v2h2l-3 7c0 1.66 1.57 3 3.5 3S9 14.66 9 13L6 6h3.17c.3.85.98 1.53 1.83 1.83V19H2v2h20v-2h-9V7.83zM20.37 13h-3.74l1.87-4.37L20.37 13zm-13 0H3.63L5.5 8.63 7.37 13zM12 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/></svg>
+            <h3>Derechos</h3>
+            <p>Derecho a tener derechos, leyes y proyectos</p>
+            <span class="eje-more"><span>Ver actividades →</span></span>
+          </a>
+          <a class="eje eje-ambiente" href="https://www.redherramientas.com/search/label/Soberan%C3%ADa%20Alimentaria">
+            <svg class="eje-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.05 8.05a7.007 7.007 0 0 0-.02 9.88c1.47-3.4 4.09-6.24 7.36-7.93A15.952 15.952 0 0 0 8.1 16.94c2.6 1.23 5.8.78 7.95-1.37C19.53 12.09 20 2 20 2S9.91 2.47 6.05 8.05z"/></svg>
+            <h3>Medio Ambiente</h3>
+            <p>Incluye soberanía alimentaria · podcast de Marta</p>
+            <span class="eje-more"><span>Ver actividades →</span></span>
+          </a>
+        </div>
+      </section>
+
+      <div class="separator"></div>
+
+      <!-- Nuestras propuestas -->
+      <section id="propuestas">
+        <h2 class="section-title">Nuestras propuestas</h2>
+        <ul class="proposals">
+          <li><span aria-hidden="true">📱</span>Talleres y capacitaciones</li>
+          <li><span aria-hidden="true">🔒</span>Consejos de seguridad digital</li>
+          <li><span aria-hidden="true">🤖</span>Inteligencia artificial para la vida cotidiana</li>
+          <li><span aria-hidden="true">🎙️</span>Contenidos audiovisuales</li>
+          <li><span aria-hidden="true">📚</span>Guías y materiales descargables</li>
+        </ul>
+      </section>
+
+      <div class="separator"></div>
+
+      <!-- Recursos destacados -->
+      <section id="recursos">
+        <h2 class="section-title">Recursos destacados</h2>
+        <div class="resource-links">
+          <a href="#pendiente-lictips">Lic Tips</a>
+          <a href="#pendiente-grabaciones">Grabaciones</a>
+          <a href="#pendiente-drive">Drive con material</a>
+        </div>
+        <div class="resources">
+          <a class="resource" href="#pendiente-estafas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>Cómo detectar estafas virtuales</a>
+          <a class="resource" href="#pendiente-accesibilidad"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>Configuraciones de accesibilidad</a>
+          <a class="resource" href="#pendiente-whatsapp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>Uso seguro de WhatsApp</a>
+          <a class="resource" href="#pendiente-tutoriales"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>Tutoriales paso a paso</a>
+          <a class="resource" href="#pendiente-ia"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>Guías sobre inteligencia artificial</a>
+        </div>
+      </section>
+
+      <div class="separator"></div>
+
+      <!-- Novedades -->
+      <section id="novedades">
+        <h2 class="section-title news-title">Novedades</h2>
+        <div class="news">
+          <article class="news-card">
+            <h3>Encuentro presencial: Uso del cajero automático</h3>
+            <p class="news-date"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V10h14v10z"/></svg>15 de Octubre, 2026</p>
+          </article>
+          <article class="news-card">
+            <h3>Taller Online: Protegiendo nuestras contraseñas</h3>
+            <p class="news-date"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V10h14v10z"/></svg>22 de Octubre, 2026</p>
+          </article>
+          <article class="news-card">
+            <h3>Charla Abierta: Derribando mitos sobre la IA</h3>
+            <p class="news-date"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V10h14v10z"/></svg>05 de Noviembre, 2026</p>
+          </article>
+        </div>
+      </section>
+
+      <div class="separator"></div>
+
+      <!-- Donar: ícono de solidaridad en lugar del QR -->
+      <section id="donar" class="donate">
+        <div class="donate-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64"><path fill="#c77986" d="M32 34s-13-8-13-17c0-4.4 3.3-7.5 7.2-7.5 2.6 0 4.6 1.4 5.8 3.4 1.2-2 3.2-3.4 5.8-3.4 3.9 0 7.2 3.1 7.2 7.5 0 9-13 17-13 17z"/><path fill="#2c2c2c" d="M6 40c3-1.6 6.5-1.7 9.6-.3l9.4 4.2c1.8.8 2.6 2.9 1.8 4.7-.7 1.6-2.5 2.4-4.2 2l-6.4-1.6 6.2 2.4c2.1.8 4.4.8 6.5 0L52 43.6c1.9-.7 4 .2 4.7 2.1.6 1.6 0 3.4-1.5 4.3L39.6 58.6c-3.6 2-7.9 2.4-11.8 1.1L6 52.6z"/></svg>
+        </div>
+        <div class="donate-text">
+          <h2>Apoyá nuestro espacio</h2>
+          <!-- Texto provisorio: el definitivo lo envía la comisión -->
+          <p>Con tu aporte podemos seguir construyendo espacios de inclusión, encuentro y formación para mujeres adultas mayores.</p>
+        </div>
+        <a class="btn btn-mustard" href="#pendiente-donar">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 2c-1.3 0-2.4.6-3 1.5C12.4 2.6 11.3 2 10 2 8 2 6.5 3.6 6.5 5.6 6.5 8.8 13 13 13 13s6.5-4.2 6.5-7.4C19.5 3.6 18 2 16 2zM1 22h4V11H1v11zm19.5-7.5H14l-2.1-.7.3-.9 1.9.6h2.8c.6 0 1.1-.5 1.1-1.1 0-.5-.3-.9-.7-1L10.1 9H7v9.9l7 2.1 8-3v-1c0-1.1-.7-2.5-1.5-2.5z"/></svg>
+          Donar
+        </a>
+      </section>
+    </div>
+
+    <!-- Llamado a la página de contacto -->
+    <section class="contact-cta">
+      <div class="container">
+        <h2>¿Querés sumarte o hacernos una consulta?</h2>
+        <p>Escribinos y te respondemos a la brevedad.</p>
+        <a class="btn btn-outline" href="contacto.html">Ir a Contacto</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-about">
+        <img src="https://i.imgur.com/CFM0Pcr.png" alt="Red de Herramientas" width="220" height="50">
+        <div>
+          <strong>Asociación Civil Sin Fines de Lucro - IGJ N° 1981600</strong>
+          <p>Propiciamos espacios que garanticen inclusión social, cultural y de los derechos de las mujeres adultas mayores.</p>
+        </div>
+      </div>
+      <div class="social">
+        <a href="https://www.facebook.com/share/1RiPWewXqR/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#1877f2"/><path fill="#fff" d="M13.4 19v-6h2l.3-2.4h-2.3V9.1c0-.7.2-1.2 1.2-1.2h1.2V5.8c-.2 0-1-.1-1.8-.1-1.8 0-3 1.1-3 3.1v1.8H9V13h2V19z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/redherramientas?stkn=MW01cnN1eHlheHExMA==" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="6" fill="#9c27b0"/><rect x="6.5" y="6.5" width="11" height="11" rx="3.5" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="12" cy="12" r="2.7" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="16.2" cy="7.8" r="1" fill="#fff"/></svg>
+        </a>
+        <a href="https://youtube.com/@reddeherramientasentremujeres?si=X0ZCFkMKebH4L3lk" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#f44336"/><path fill="#fff" d="M10 8v8l6-4z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Volver arriba">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
