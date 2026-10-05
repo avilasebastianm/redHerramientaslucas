@@ -441,11 +441,9 @@ a { color: inherit; }
   background: #fff8fa;
 }
 
-.container.wide { max-width: 1400px; }
-
 .ejes-title {
   margin: 0 0 6px;
-  font-size: 2.1rem;
+  font-size: 2.6rem;
   font-weight: 700;
   line-height: 1.2;
   color: var(--text);
@@ -549,7 +547,7 @@ a { color: inherit; }
   .eje strong { font-size: 1.05rem; letter-spacing: 0.03em; }
   .eje small { font-size: 0.8rem; }
   .eje-icon { font-size: 1.6rem; top: 10px; right: 10px; }
-  .ejes-title { font-size: 1.7rem; }
+  .ejes-title { font-size: 2rem; }
 }
 
 /* ---------- Nuestras propuestas ---------- */
