@@ -19,7 +19,7 @@
 
       <nav class="nav" id="nav" aria-label="Principal">
         <ul>
-          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="index.html">Inicio</a></li>
           <li><a href="#quienes-somos">Quiénes somos</a></li>
           <li><a href="#actividades">Actividades</a></li>
           <li><a href="#recursos">Recursos</a></li>
@@ -51,8 +51,8 @@
 
   <main id="contenido">
 
-    <!-- Carrusel de actividades: se llena con los posteos del blog (ver script.js) -->
-    <section class="carousel" id="inicio" aria-label="Actividades">
+    <!-- Carrusel de actividades (menú "Actividades"): se llena con los posteos del blog (ver script.js) -->
+    <section class="carousel" id="actividades" aria-label="Actividades">
       <div class="slides"></div>
       <button class="carousel-arrow prev" type="button" aria-label="Anterior">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 3.5 15.7 1.7 5.4 12l10.3 10.3 1.8-1.8L9 12z"/></svg>
@@ -73,36 +73,33 @@
       </div>
     </section>
 
-    <!-- Espacio de Actividades: los 4 ejes, a todo el ancho (como en la propuesta de Sebastián) -->
-    <section class="activities" id="actividades">
+    <!-- Nuestros ejes: justo debajo de Quiénes somos, a todo el ancho (como en la propuesta de Sebastián) -->
+    <section class="ejes-section" id="ejes">
       <div class="container wide">
-        <h2 class="section-title">Espacio de Actividades</h2>
-        <p class="activities-lead">Nuestros cuatro ejes de trabajo. Elegí uno y conocé todo lo que hacemos.</p>
+        <h2 class="ejes-title">Nuestros ejes</h2>
+        <p class="ejes-lead">Cuatro grandes temas para encontrar rápido lo que buscás, en un solo clic.</p>
         <div class="ejes">
-        <a class="eje eje-salud" href="#pendiente-salud">
-          <svg class="eje-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm4 12h-3v3h-2v-3H8v-2h3V8h2v3h3v2z"/></svg>
-          <strong>Salud y Bienestar</strong>
-          <small>Actividad física y cuidado personal</small>
-          <span class="eje-more">Ver actividades →</span>
-        </a>
-        <a class="eje eje-cultura" href="https://www.redherramientas.com/search/label/Cultura">
-          <svg class="eje-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3 1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
-          <strong>Educación y Cultura</strong>
-          <small>Enredos de Película · #ClicSeguroEnRED</small>
-          <span class="eje-more">Ver actividades →</span>
-        </a>
-        <a class="eje eje-derechos" href="https://www.redherramientas.com/search/label/Derecho%20a%20tener%20derechos">
-          <svg class="eje-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 7.83c.85-.3 1.53-.98 1.83-1.83H18l-3 7c0 1.66 1.57 3 3.5 3s3.5-1.34 3.5-3l-3-7h2V4h-6.17A2.99 2.99 0 0 0 12 2c-1.31 0-2.42.83-2.83 2H3v2h2l-3 7c0 1.66 1.57 3 3.5 3S9 14.66 9 13L6 6h3.17c.3.85.98 1.53 1.83 1.83V19H2v2h20v-2h-9V7.83zM20.37 13h-3.74l1.87-4.37L20.37 13zm-13 0H3.63L5.5 8.63 7.37 13zM12 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/></svg>
-          <strong>Derechos</strong>
-          <small>Derecho a tener derechos, leyes y proyectos</small>
-          <span class="eje-more">Ver actividades →</span>
-        </a>
-        <a class="eje eje-ambiente" href="https://www.redherramientas.com/search/label/Soberan%C3%ADa%20Alimentaria">
-          <svg class="eje-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.05 8.05a7.007 7.007 0 0 0-.02 9.88c1.47-3.4 4.09-6.24 7.36-7.93A15.952 15.952 0 0 0 8.1 16.94c2.6 1.23 5.8.78 7.95-1.37C19.53 12.09 20 2 20 2S9.91 2.47 6.05 8.05z"/></svg>
-          <strong>Medio Ambiente</strong>
-          <small>Incluye soberanía alimentaria · podcast de Marta</small>
-          <span class="eje-more">Ver actividades →</span>
-        </a>
+          <a class="eje eje-salud" href="#pendiente-salud">
+            <span class="eje-icon" aria-hidden="true">🌿</span>
+            <strong>Salud y Bienestar</strong>
+            <small>Actividad física y cuidado personal</small>
+          </a>
+          <a class="eje eje-cultura" href="https://www.redherramientas.com/search/label/Cultura">
+            <span class="eje-icon" aria-hidden="true">🎭</span>
+            <strong>Educación y Cultura</strong>
+            <small>Enredos de Película · #ClicSeguroEnRED</small>
+            <span class="chip">Nuevo</span>
+          </a>
+          <a class="eje eje-derechos" href="https://www.redherramientas.com/search/label/Derecho%20a%20tener%20derechos">
+            <span class="eje-icon" aria-hidden="true">⚖️</span>
+            <strong>Derechos</strong>
+            <small>Derecho a tener derechos, leyes y proyectos</small>
+          </a>
+          <a class="eje eje-ambiente" href="https://www.redherramientas.com/search/label/Soberan%C3%ADa%20Alimentaria">
+            <span class="eje-icon" aria-hidden="true">🌱</span>
+            <strong>Medio Ambiente</strong>
+            <small>Incluye soberanía alimentaria · podcast de Marta</small>
+          </a>
         </div>
       </div>
     </section>

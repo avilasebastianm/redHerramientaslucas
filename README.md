@@ -19,5 +19,5 @@ Para verlo: abrir `index.html` en el navegador.
 
 ## Pendientes
 - Datos de Mercado Pago, transferencia, PayPal y depósito, y texto de "Apoyá nuestro espacio" (los envía la comisión).
-- Imágenes de los ejes (800 x 1000 px, vertical) y link del eje Salud y Bienestar.
+- Imágenes de los ejes (800 x 880 px, casi cuadradas) y link del eje Salud y Bienestar.
 - Links de Lic Tips, Grabaciones, Drive y de las tarjetas de recursos.
