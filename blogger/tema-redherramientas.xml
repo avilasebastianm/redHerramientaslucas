@@ -1,0 +1,1726 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<!-- Tema de Red de Herramientas Entre Mujeres. Generado con blogger/build.py: no editar a mano. -->
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateVersion='1.0.0' expr:dir='data:blog.languageDirection' lang='es-AR' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<meta content='width=device-width, initial-scale=1' name='viewport'/>
+<b:include data='blog' name='all-head-content'/>
+<title><b:if cond='data:view.isHomepage'><data:blog.title.escaped/><b:else/><data:view.title.escaped/> | <data:blog.title.escaped/></b:if></title>
+<link href='https://fonts.googleapis.com' rel='preconnect'/>
+<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;900&amp;display=swap' rel='stylesheet'/>
+<b:skin version='1.0.0'><![CDATA[/* Los estilos están en el <style> de abajo */]]></b:skin>
+<b:template-skin><![CDATA[
+body#layout .carousel, body#layout .to-top { display: none; }
+body#layout .header { position: static; }
+]]></b:template-skin>
+<style>/*<![CDATA[*/
+/* Red de Herramientas Entre Mujeres — estilos (diseño de la propuesta de Lucas) */
+
+:root {
+  --dominant: #c77986;
+  --dominant-dark: #b56a75;
+  --separator: #cc6e83;
+  --accent: #e5a9a9;
+  --mustard: #e4c563;
+  --bg: #faf9f6;
+  --text: #2c2c2c;
+  --muted: #6b6b6b;
+  --white: #ffffff;
+  --border: #e0e0e0;
+  --footer: #0a0514;
+  --wa: #25d366;
+  --header-h: 90px;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 10px);
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+}
+
+img { max-width: 100%; }
+a { color: inherit; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--dominant);
+  outline-offset: 2px;
+}
+
+.skip {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px 14px;
+  z-index: 100;
+}
+.skip:focus { left: 8px; top: 8px; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ---------- Header: logo y menú en la misma línea, fondo blanco, fijo al hacer scroll ---------- */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--white);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.header-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: var(--header-h);
+  padding: 0 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo img {
+  display: block;
+  height: 60px;
+  width: auto;
+}
+
+.nav { margin-left: auto; }
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 4px;
+}
+
+.nav a {
+  display: block;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.nav a:hover,
+.nav a[aria-current="page"] {
+  background: var(--dominant);
+  color: var(--white);
+}
+
+.header-tools {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-btn {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--dominant);
+  cursor: pointer;
+}
+.icon-btn:hover { background: #f6e9ec; }
+.icon-btn svg { width: 28px; height: 28px; }
+
+.whatsapp-btn {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--wa);
+}
+.whatsapp-btn svg { width: 26px; height: 26px; fill: #fff; }
+
+/* Tamaño de letra */
+.font-size { position: relative; }
+
+.font-size-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin: 6px 0 0;
+  padding: 6px 0;
+  list-style: none;
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+  min-width: 150px;
+}
+.font-size-menu[hidden] { display: none; }
+
+.font-size-menu button {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  border: 0;
+  background: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.font-size-menu button:hover { background: #f5f5f5; }
+.font-size-menu button[aria-pressed="true"] { font-weight: 700; color: var(--dominant); }
+
+.menu-btn { display: none; }
+
+/* Pantallas chicas: menú hamburguesa en la misma línea que el logo */
+@media (max-width: 1000px) {
+  .menu-btn { display: grid; }
+  .header-tools { margin-left: auto; }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: 0;
+    background: var(--white);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+  }
+  .nav.open { display: block; }
+
+  .nav ul {
+    flex-direction: column;
+    padding: 8px 16px 16px;
+  }
+
+  .nav a {
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root { --header-h: 72px; }
+  .header-inner { padding: 0 12px; gap: 4px; }
+  .logo img { height: 44px; }
+  .icon-btn, .whatsapp-btn { width: 40px; height: 40px; }
+}
+
+/* ---------- Separador (barra rosa entre secciones) ---------- */
+
+.separator {
+  height: 6px;
+  margin: 40px 0;
+  border-radius: 3px;
+  background: var(--separator);
+}
+
+/* ---------- Títulos y botones ---------- */
+
+.section { padding: 48px 0; }
+
+.section-title {
+  margin: 0 0 24px;
+  font-size: 1.65rem;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 24px;
+  background: var(--dominant);
+  color: var(--white);
+  font: inherit;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+.btn:hover { background: var(--dominant-dark); }
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--white);
+}
+.btn-outline:hover { background: var(--white); color: var(--text); }
+
+.btn-mustard {
+  background: var(--mustard);
+  color: var(--text);
+  font-size: 1.3rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  padding: 16px 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.btn-mustard:hover { background: #d9b84c; }
+.btn-mustard svg { width: 28px; height: 28px; }
+
+/* ---------- Carrusel de actividades (ancho completo) ---------- */
+
+.carousel {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+  background: #000;
+}
+
+.slides {
+  display: flex;
+  height: 100%;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+  position: relative;
+  flex: 0 0 100%;
+  height: 100%;
+}
+
+/* La foto lleva al posteo. Fondo desenfocado + foto entera para que todas las diapositivas se vean parejas */
+.slide-media {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.slide-media .blur {
+  position: absolute;
+  inset: -20px;
+  background-size: cover;
+  background-position: center;
+  filter: blur(16px) brightness(0.6);
+}
+.slide-media img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.slide-box {
+  position: absolute;
+  left: 60px;
+  right: 60px;
+  bottom: 40px;
+  max-height: calc(100% - 80px);
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.7);
+  color: var(--white);
+}
+
+.slide-box h2 {
+  margin: 0 0 12px;
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+.slide-desc {
+  margin: 0 0 24px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* "Ver más" despliega el texto completo y recién ahí aparece el enlace al posteo */
+.slide-full {
+  display: none;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  padding-right: 8px;
+}
+.slide-full p { margin: 0 0 10px; }
+
+.slide.open .slide-desc { display: none; }
+.slide.open .slide-full { display: block; }
+
+.slide-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.slide-link { display: none; }
+.slide.open .slide-link { display: inline-block; }
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border: 0;
+  background: transparent;
+  color: var(--white);
+  cursor: pointer;
+}
+.carousel-arrow svg { width: 40px; height: 40px; filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.6)); }
+.carousel-arrow.prev { left: 10px; }
+.carousel-arrow.next { right: 10px; }
+
+.dots {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.dots button {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: width 0.3s;
+}
+.dots button.active {
+  width: 32px;
+  background: var(--dominant);
+}
+
+@media (max-width: 800px) {
+  .carousel { height: 480px; }
+  .slide-box { left: 16px; right: 16px; bottom: 36px; padding: 18px; max-height: calc(100% - 60px); }
+  .slide-box h2 { font-size: 1.35rem; }
+  .carousel-arrow { top: 30%; }
+}
+
+/* ---------- Quiénes somos (mini sección) ---------- */
+
+.about {
+  padding: 36px 0 8px;
+  text-align: center;
+  background: var(--white);
+}
+.about p {
+  max-width: 820px;
+  margin: 0 auto 16px;
+  font-size: 1.2rem;
+}
+.about-link {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--dominant-dark);
+  text-decoration: none;
+}
+.about-link:hover { text-decoration: underline; }
+
+/* ---------- Nuestros ejes: debajo de Quiénes somos, estilo de la propuesta de Sebastián ---------- */
+
+.ejes-section {
+  padding: 48px 0;
+  background: #fff8fa;
+}
+
+.ejes-title {
+  margin: 0 0 6px;
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text);
+}
+.ejes-title::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 4px;
+  margin-top: 10px;
+  border-radius: 2px;
+  background: #2e9e4f;
+}
+.ejes-lead {
+  margin: 0 0 28px;
+  max-width: 60ch;
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+
+.ejes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Imágenes de los ejes: 800 x 880 px (casi cuadradas, 1:1,1). Se cargan con style="--img: url(...)" en cada .eje */
+.eje {
+  position: relative;
+  aspect-ratio: 1 / 1.1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 22px;
+  border-radius: 16px;
+  overflow: hidden;
+  isolation: isolate;
+  color: var(--white);
+  text-decoration: none;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.eje:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.22);
+}
+.eje::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.05) 65%);
+}
+
+.eje-icon {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.eje strong {
+  font-size: 1.5rem;
+  line-height: 1.1;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+.eje small {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+.chip {
+  align-self: flex-start;
+  margin-top: 10px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--white);
+  color: #660828;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.eje-salud    { background-image: var(--img, linear-gradient(135deg, #7a5c2e, #c9a24b)); }
+.eje-cultura  { background-image: var(--img, linear-gradient(135deg, #2b2320, #7a5a44)); }
+.eje-derechos { background-image: var(--img, linear-gradient(135deg, #5a1a86, #c04bb0)); }
+.eje-ambiente { background-image: var(--img, linear-gradient(135deg, #14532d, #4fae5a)); }
+
+@media (max-width: 1000px) { .ejes { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) {
+  .ejes { gap: 12px; }
+  .eje { padding: 14px; }
+  .eje strong { font-size: 1.05rem; letter-spacing: 0.03em; }
+  .eje small { font-size: 0.8rem; }
+  .eje-icon { font-size: 1.6rem; top: 10px; right: 10px; }
+  .ejes-title { font-size: 2rem; }
+}
+
+/* ---------- Novedades ---------- */
+
+.news-title { color: var(--separator); text-transform: uppercase; }
+
+.news {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.news-card {
+  padding: 24px;
+  border-radius: 12px;
+  background: #fdf0f2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+}
+.news-card h3 {
+  margin: 0 0 12px;
+  font-size: 1.25rem;
+}
+.news-date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--dominant);
+  font-weight: 600;
+}
+.news-date svg { width: 20px; height: 20px; fill: var(--dominant); }
+
+@media (max-width: 800px) { .news { grid-template-columns: 1fr; } }
+
+/* ---------- Donar ---------- */
+
+.donate {
+  margin-bottom: 56px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 32px;
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--white);
+}
+.donate-icon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #fdf0f2;
+}
+.donate-icon svg { width: 72px; height: 72px; }
+.donate-text { flex: 1; min-width: 240px; }
+.donate-text h2 { margin: 0 0 8px; font-size: 1.6rem; font-weight: 500; }
+.donate-text p { margin: 0; color: var(--muted); }
+
+/* ---------- Llamado a contacto (home) ---------- */
+
+.contact-cta {
+  padding: 56px 0;
+  background: var(--dominant);
+  color: var(--white);
+  text-align: center;
+}
+.contact-cta h2 { margin: 0 0 8px; font-size: 1.9rem; font-weight: 500; }
+.contact-cta p { margin: 0 0 24px; font-size: 1.15rem; }
+
+/* ---------- Página de contacto ---------- */
+
+.page-hero {
+  padding: 56px 0;
+  background: var(--dominant);
+  color: var(--white);
+}
+.page-hero h1 { margin: 0 0 8px; font-size: 2.6rem; font-weight: 500; }
+.page-hero p { margin: 0; max-width: 620px; font-size: 1.2rem; }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 40px;
+  align-items: start;
+}
+@media (max-width: 800px) { .contact-grid { grid-template-columns: 1fr; } }
+
+.channels { display: grid; gap: 14px; }
+.channel {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--white);
+  text-decoration: none;
+}
+.channel:hover { box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+.channel-icon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+.channel-icon svg { width: 26px; height: 26px; fill: #fff; }
+.channel strong { display: block; }
+.channel small { color: var(--muted); font-size: 0.95rem; overflow-wrap: anywhere; }
+
+.contact-form {
+  display: grid;
+  gap: 18px;
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--white);
+}
+.contact-form h2 { margin: 0; font-weight: 500; }
+.contact-form label { display: grid; gap: 6px; font-weight: 600; }
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  background: var(--bg);
+  font: inherit;
+  color: var(--text);
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--dominant);
+  outline: 2px solid var(--accent);
+}
+.contact-form textarea { min-height: 150px; resize: vertical; }
+.contact-form .honey { display: none; }
+.form-msg { margin: 0; font-weight: 700; }
+.form-msg:empty { display: none; }
+.form-msg.ok { color: #2e7d32; }
+.form-msg.error { color: #c62828; }
+
+/* ---------- Footer ---------- */
+
+.footer {
+  padding: 40px 0;
+  background: var(--footer);
+  color: var(--white);
+}
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.footer-about {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 760px;
+}
+.footer-about img { height: 50px; width: auto; flex: none; }
+.footer-about strong { display: block; font-size: 1rem; }
+.footer-about p { margin: 8px 0 0; font-size: 0.9rem; color: rgba(255, 255, 255, 0.7); }
+
+.social { display: flex; gap: 20px; }
+.social a { display: block; }
+.social svg { width: 40px; height: 40px; }
+
+@media (max-width: 800px) {
+  .footer-inner { flex-direction: column; text-align: center; }
+  .footer-about { flex-direction: column; }
+}
+
+/* ---------- Volver arriba ---------- */
+
+.to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border: 0;
+  border-radius: 16px;
+  background: rgba(199, 121, 134, 0.6);
+  color: var(--white);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.to-top.show { opacity: 1; pointer-events: auto; }
+.to-top:hover { background: var(--dominant); }
+.to-top svg { width: 28px; height: 28px; }
+
+/* ---------- Página de donación ---------- */
+
+.gallery {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 260px 260px;
+  gap: 6px;
+}
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.gallery-main { grid-row: span 2; }
+
+.donate-hero-text {
+  position: relative;
+  max-width: 720px;
+  margin: -90px 0 0;
+  padding: 28px 32px;
+  border-radius: 16px;
+  background: var(--white);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+.donate-hero-text h1 { margin: 0 0 8px; font-size: 2.4rem; font-weight: 500; color: var(--dominant-dark); }
+.donate-hero-text p { margin: 0; font-size: 1.15rem; }
+
+.donate-title { text-align: center; font-size: 2rem; }
+
+.donate-ways {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.way {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 28px 16px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--white);
+  font: inherit;
+  color: var(--text);
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.way:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); }
+.way-icon {
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 8px;
+  border-radius: 50%;
+  color: var(--white);
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+.way strong { font-size: 1.2rem; }
+.way small { color: var(--muted); font-size: 0.95rem; }
+
+.donate-more { text-align: center; margin: 32px 0 0; font-size: 1.1rem; }
+
+/* Modal con datos bancarios */
+.modal {
+  width: min(480px, calc(100% - 32px));
+  padding: 28px;
+  border: 0;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  color: var(--text);
+}
+.modal::backdrop { background: rgba(0, 0, 0, 0.5); }
+.modal-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.modal-head h2 { margin: 0; font-size: 1.5rem; font-weight: 500; }
+.modal-close {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: #f2f2f2;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.modal-close:hover { background: #e4e4e4; }
+.modal p { color: var(--muted); }
+.modal-note { margin-bottom: 0; font-size: 0.95rem; }
+
+.bank-data { margin: 0; display: grid; gap: 12px; }
+.bank-data div {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eee;
+}
+.bank-data dt { font-weight: 600; }
+.bank-data dd { margin: 0; display: flex; align-items: center; justify-content: space-between; gap: 8px; overflow-wrap: anywhere; }
+.pending { color: #b26a00; font-style: italic; }
+
+.copy-btn {
+  flex: none;
+  padding: 4px 12px;
+  border: 1px solid var(--dominant);
+  border-radius: 14px;
+  background: transparent;
+  color: var(--dominant-dark);
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.copy-btn:hover { background: var(--dominant); color: var(--white); }
+.copy-btn[hidden] { display: none; }
+
+@media (max-width: 800px) {
+  .gallery { grid-template-columns: 1fr 1fr; grid-template-rows: 240px 140px; }
+  .gallery-main { grid-row: auto; grid-column: span 2; }
+  .donate-hero-text { margin-top: -16px; padding: 20px; }
+  .donate-hero-text h1 { font-size: 1.9rem; }
+  .donate-ways { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+}
+
+/* ---------- Solo en Blogger: posteos, listados y ajustes ---------- */
+
+/* Blogger envuelve cada grupo de gadgets en div.section y cada gadget en div.widget */
+div.section { padding: 0; margin: 0; }
+div.widget { margin: 0; }
+
+/* Blogger usa .separator para centrar las imágenes de los posteos: no es la barra rosa */
+.post-body .separator {
+  height: auto;
+  margin: 0 0 1em;
+  border-radius: 0;
+  background: none;
+}
+
+.container.narrow { max-width: 820px; }
+
+.chip-label {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 999px;
+  background: var(--dominant);
+  color: var(--white);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+a.chip-label:hover { background: var(--dominant-dark); }
+
+/* ---------- Posteo ---------- */
+
+.post-page { padding: 32px 0 56px; }
+
+.post-page .container {
+  padding-top: 28px;
+  padding-bottom: 36px;
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.post-back {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: var(--dominant-dark);
+  font-weight: 700;
+  text-decoration: none;
+}
+.post-back:hover { text-decoration: underline; }
+
+.post-labels { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+
+.post-title {
+  margin: 0 0 8px;
+  font-size: 2.2rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.post-date { margin: 0 0 24px; color: var(--muted); }
+
+.post-body {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  overflow-wrap: break-word;
+}
+.post-body img { height: auto; border-radius: 8px; }
+.post-body iframe { max-width: 100%; }
+.post-body a { color: var(--dominant-dark); }
+.post-body h2, .post-body h3 { line-height: 1.3; }
+.post-body blockquote {
+  margin: 1.5em 0;
+  padding: 12px 20px;
+  border-left: 4px solid var(--dominant);
+  background: var(--bg);
+}
+
+.post-share {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  font-weight: 700;
+}
+.share-btn {
+  padding: 8px 18px;
+  border-radius: 24px;
+  color: var(--white);
+  text-decoration: none;
+}
+.share-wa { background: var(--wa); }
+.share-fb { background: #1877f2; }
+.share-btn:hover { opacity: 0.85; }
+
+/* ---------- Listados (etiquetas, búsquedas, archivo) ---------- */
+
+.list-page { padding: 40px 0 56px; }
+
+.list-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.list-empty { color: var(--muted); font-size: 1.15rem; }
+
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.post-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 16px;
+  background: var(--white);
+  color: var(--text);
+  text-decoration: none;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.16);
+}
+
+.post-card-img { aspect-ratio: 4 / 3; background: #f3e6e8; }
+.post-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.post-card-img img.no-img { object-fit: contain; padding: 24px; }
+
+.post-card-body { display: flex; flex-direction: column; flex: 1; padding: 18px 20px 20px; }
+.post-card-body .chip-label { align-self: flex-start; margin-bottom: 10px; }
+.post-card-body h2 { margin: 0 0 6px; font-size: 1.25rem; line-height: 1.3; }
+.post-card-date { margin: 0 0 10px; color: var(--muted); font-size: 0.9rem; }
+.post-card-snippet { margin: 0 0 14px; color: var(--muted); overflow-wrap: anywhere; }
+.post-card-more { margin-top: auto; color: var(--dominant-dark); font-weight: 700; }
+
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 36px;
+}
+.pager .btn:only-child { margin-left: auto; }
+.btn-light { background: var(--white); color: var(--text); box-shadow: inset 0 0 0 2px var(--dominant); }
+.btn-light:hover { background: var(--dominant); color: var(--white); }
+
+@media (max-width: 900px) { .post-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) {
+  .post-grid { grid-template-columns: 1fr; }
+  .post-title, .list-title { font-size: 1.7rem; }
+  .post-page { padding: 16px 0 40px; }
+}
+
+/*]]>*/</style>
+</head>
+<body>
+<a class='skip' href='#contenido'>Saltar al contenido</a>
+
+<header class="header">
+    <div class="header-inner">
+      <a class="logo" href="/"><img src="https://i.imgur.com/CFM0Pcr.png" alt="Red de Herramientas — Asociación Civil IGJ 1981600" width="264" height="60"/></a>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/#quienes-somos">Quiénes somos</a></li>
+          <li><a href="/#actividades">Actividades</a></li>
+          <li><a href="/p/contactanos.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-tools">
+        <div class="font-size">
+          <button class="icon-btn" type="button" aria-label="Tamaño de letra" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 4v3h5v12h3V7h5V4H9zm-6 8h3v7h3v-7h3V9H3v3z"/></svg>
+          </button>
+          <ul class="font-size-menu" hidden="hidden">
+            <li><button type="button" data-scale="0.85">Pequeña</button></li>
+            <li><button type="button" data-scale="1">Normal</button></li>
+            <li><button type="button" data-scale="1.15">Grande</button></li>
+            <li><button type="button" data-scale="1.3">Muy grande</button></li>
+          </ul>
+        </div>
+        <a class="whatsapp-btn" href="https://wa.me/5491122766776" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.9L2 22l5.25-1.38A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.3 15l-.3-.2-3.1.8.83-3-.2-.32A8.1 8.1 0 0 1 12.04 3.8zM8.6 7.5c-.2 0-.5.07-.75.35-.25.27-1 1-1 2.4s1.03 2.8 1.17 3c.15.2 2 3.2 4.9 4.36 2.4.95 2.9.76 3.4.72.52-.05 1.7-.7 1.93-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.2-.55-.34-.3-.15-1.7-.84-1.96-.94-.27-.1-.46-.15-.65.14-.2.3-.75.94-.9 1.13-.17.2-.33.22-.62.07-.3-.14-1.2-.44-2.3-1.4-.85-.76-1.42-1.7-1.6-1.98-.16-.3 0-.45.13-.6.14-.13.3-.34.44-.5.15-.17.2-.3.3-.5.1-.2.05-.36-.02-.5-.07-.15-.65-1.6-.9-2.17-.23-.55-.47-.48-.65-.49h-.55z"/></svg>
+        </a>
+        <button class="icon-btn menu-btn" type="button" aria-controls="nav" aria-expanded="false" aria-label="Menú">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+<main id='contenido'>
+<b:if cond='data:view.isHomepage'>
+    <!-- Carrusel de actividades (menú "Actividades"): se llena con los posteos del blog (ver script.js) -->
+    <section class="carousel" id="actividades" aria-label="Actividades">
+      <div class="slides"></div>
+      <button class="carousel-arrow prev" type="button" aria-label="Anterior">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 3.5 15.7 1.7 5.4 12l10.3 10.3 1.8-1.8L9 12z"/></svg>
+      </button>
+      <button class="carousel-arrow next" type="button" aria-label="Siguiente">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.5 20.5 8.3 22.3 18.6 12 8.3 1.7 6.5 3.5 15 12z"/></svg>
+      </button>
+      <div class="dots"></div>
+    </section>
+
+
+<b:section class='home-section' id='home-quienes' maxwidgets='1' showaddelement='no'>
+<b:widget id='HTML101' locked='false' title='Quiénes somos' type='HTML' version='2' visible='true'>
+  <b:widget-settings>
+    <b:widget-setting name='content'><![CDATA[    <!-- Mini sección Quiénes somos: debajo del carrusel (Trello / chat del 1/10) -->
+    <section class="about" id="quienes-somos">
+      <div class="container">
+        <h2 class="visually-hidden">Quiénes somos</h2>
+        <p>Somos una asociación civil constituida por mujeres adultas mayores que está dedicada a la lucha por la inclusión plena y el trato digno.</p>
+        <p>Desde una mirada federal, horizontal y profundamente antiviejista construimos proyectos y desarrollamos propuestas que derriban estereotipos y atienden vulnerabilidades sociales, económicas, culturales y de salud.</p>
+        <a class="about-link" href="https://www.redherramientas.com/p/quienes-somos.html">&gt;&gt; Quiénes somos</a>
+      </div>
+    </section>
+
+]]></b:widget-setting>
+  </b:widget-settings>
+  <b:includable id='main'><data:content/></b:includable>
+</b:widget>
+</b:section>
+<b:section class='home-section' id='home-ejes' maxwidgets='1' showaddelement='no'>
+<b:widget id='HTML102' locked='false' title='Nuestros ejes' type='HTML' version='2' visible='true'>
+  <b:widget-settings>
+    <b:widget-setting name='content'><![CDATA[    <!-- Nuestros ejes: justo debajo de Quiénes somos, a todo el ancho (como en la propuesta de Sebastián) -->
+    <section class="ejes-section" id="ejes">
+      <div class="container">
+        <h2 class="ejes-title">Nuestros ejes</h2>
+        <p class="ejes-lead">Cuatro grandes temas para encontrar rápido lo que buscás, en un solo clic.</p>
+        <div class="ejes">
+          <a class="eje eje-salud" href="#pendiente-salud">
+            <span class="eje-icon" aria-hidden="true">🌿</span>
+            <strong>Salud y Bienestar</strong>
+            <small>Actividad física y cuidado personal</small>
+          </a>
+          <a class="eje eje-cultura" href="https://www.redherramientas.com/search/label/Cultura">
+            <span class="eje-icon" aria-hidden="true">🎭</span>
+            <strong>Educación y Cultura</strong>
+            <small>Enredos de Película · #ClicSeguroEnRED</small>
+            <span class="chip">Nuevo</span>
+          </a>
+          <a class="eje eje-derechos" href="https://www.redherramientas.com/search/label/Derecho%20a%20tener%20derechos">
+            <span class="eje-icon" aria-hidden="true">⚖️</span>
+            <strong>Derechos</strong>
+            <small>Derecho a tener derechos, leyes y proyectos</small>
+          </a>
+          <a class="eje eje-ambiente" href="https://www.redherramientas.com/search/label/Soberan%C3%ADa%20Alimentaria">
+            <span class="eje-icon" aria-hidden="true">🌱</span>
+            <strong>Medio Ambiente</strong>
+            <small>Incluye soberanía alimentaria · podcast de Marta</small>
+          </a>
+        </div>
+      </div>
+    </section>
+
+]]></b:widget-setting>
+  </b:widget-settings>
+  <b:includable id='main'><data:content/></b:includable>
+</b:widget>
+</b:section>
+<div class='container'>
+<b:section class='home-section' id='home-bloques' showaddelement='yes'>
+<b:widget id='HTML105' locked='false' title='Novedades' type='HTML' version='2' visible='true'>
+  <b:widget-settings>
+    <b:widget-setting name='content'><![CDATA[      <div class="separator"></div>
+
+      <!-- Novedades -->
+      <section id="novedades">
+        <h2 class="section-title news-title">Novedades</h2>
+        <div class="news">
+          <article class="news-card">
+            <h3>Encuentro presencial: Uso del cajero automático</h3>
+            <p class="news-date"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V10h14v10z"/></svg>15 de Octubre, 2026</p>
+          </article>
+          <article class="news-card">
+            <h3>Taller Online: Protegiendo nuestras contraseñas</h3>
+            <p class="news-date"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V10h14v10z"/></svg>22 de Octubre, 2026</p>
+          </article>
+          <article class="news-card">
+            <h3>Charla Abierta: Derribando mitos sobre la IA</h3>
+            <p class="news-date"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V10h14v10z"/></svg>05 de Noviembre, 2026</p>
+          </article>
+        </div>
+      </section>
+]]></b:widget-setting>
+  </b:widget-settings>
+  <b:includable id='main'><data:content/></b:includable>
+</b:widget>
+<b:widget id='HTML106' locked='false' title='Apoyá nuestro espacio (Donar)' type='HTML' version='2' visible='true'>
+  <b:widget-settings>
+    <b:widget-setting name='content'><![CDATA[      <div class="separator"></div>
+
+      <!-- Donar: ícono de solidaridad en lugar del QR -->
+      <section id="donar" class="donate">
+        <div class="donate-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64"><path fill="#c77986" d="M32 34s-13-8-13-17c0-4.4 3.3-7.5 7.2-7.5 2.6 0 4.6 1.4 5.8 3.4 1.2-2 3.2-3.4 5.8-3.4 3.9 0 7.2 3.1 7.2 7.5 0 9-13 17-13 17z"/><path fill="#2c2c2c" d="M6 40c3-1.6 6.5-1.7 9.6-.3l9.4 4.2c1.8.8 2.6 2.9 1.8 4.7-.7 1.6-2.5 2.4-4.2 2l-6.4-1.6 6.2 2.4c2.1.8 4.4.8 6.5 0L52 43.6c1.9-.7 4 .2 4.7 2.1.6 1.6 0 3.4-1.5 4.3L39.6 58.6c-3.6 2-7.9 2.4-11.8 1.1L6 52.6z"/></svg>
+        </div>
+        <div class="donate-text">
+          <h2>Apoyá nuestro espacio</h2>
+          <!-- Texto provisorio: el definitivo lo envía la comisión -->
+          <p>Con tu aporte podemos seguir construyendo espacios de inclusión, encuentro y formación para mujeres adultas mayores.</p>
+        </div>
+        <a class="btn btn-mustard" href="/p/donar.html">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 2c-1.3 0-2.4.6-3 1.5C12.4 2.6 11.3 2 10 2 8 2 6.5 3.6 6.5 5.6 6.5 8.8 13 13 13 13s6.5-4.2 6.5-7.4C19.5 3.6 18 2 16 2zM1 22h4V11H1v11zm19.5-7.5H14l-2.1-.7.3-.9 1.9.6h2.8c.6 0 1.1-.5 1.1-1.1 0-.5-.3-.9-.7-1L10.1 9H7v9.9l7 2.1 8-3v-1c0-1.1-.7-2.5-1.5-2.5z"/></svg>
+          Donar
+        </a>
+      </section>
+]]></b:widget-setting>
+  </b:widget-settings>
+  <b:includable id='main'><data:content/></b:includable>
+</b:widget>
+</b:section>
+</div>
+
+</b:if>
+
+<b:section class='main' id='main' maxwidgets='1' showaddelement='no'>
+<b:widget id='Blog1' locked='true' title='Entradas del blog' type='Blog' version='2' visible='true'>
+<b:includable id='main' var='this'>
+  <b:if cond='data:view.isSingleItem'>
+    <b:loop values='data:posts' var='post'>
+      <b:if cond='data:view.isPage and (data:post.body contains &quot;rh-full&quot;)'>
+        <!-- Páginas armadas con el diseño del sitio (Contacto, Donar): van completas -->
+        <data:post.body/>
+      <b:else/>
+        <article class='post-page'>
+          <div class='container narrow'>
+            <a class='post-back' expr:href='data:blog.homepageUrl'>&#8592; Volver al inicio</a>
+            <b:if cond='data:post.labels'>
+              <div class='post-labels'>
+                <b:loop values='data:post.labels' var='label'><a class='chip-label' expr:href='data:label.url'><data:label.name/></a></b:loop>
+              </div>
+            </b:if>
+            <h1 class='post-title'><b:eval expr='data:post.title ? data:post.title : &quot;Sin título&quot;'/></h1>
+            <b:if cond='data:view.isPost'><p class='post-date'><data:post.date/></p></b:if>
+            <div class='post-body'><data:post.body/></div>
+            <b:if cond='data:view.isPost'>
+              <div class='post-share'>
+                <span>Compartir:</span>
+                <a class='share-btn share-wa' expr:href='&quot;https://wa.me/?text=&quot; + data:post.url.canonical' rel='noopener' target='_blank'>WhatsApp</a>
+                <a class='share-btn share-fb' expr:href='&quot;https://www.facebook.com/sharer.php?u=&quot; + data:post.url.canonical' rel='noopener' target='_blank'>Facebook</a>
+              </div>
+            </b:if>
+          </div>
+        </article>
+      </b:if>
+    </b:loop>
+  <b:elseif cond='!data:view.isHomepage'/>
+    <section class='list-page'>
+      <div class='container'>
+        <h1 class='section-title list-title'>
+          <b:if cond='data:view.search.label'><data:view.search.label/>
+          <b:elseif cond='data:view.search.query'/>Resultados para &#8220;<data:view.search.query/>&#8221;
+          <b:elseif cond='data:view.isArchive'/><data:view.archive.rangeMessage/>
+          <b:else/>Publicaciones</b:if>
+        </h1>
+        <b:if cond='data:posts.empty'><p class='list-empty'>No encontramos publicaciones.</p></b:if>
+        <div class='post-grid'>
+          <b:loop values='data:posts' var='post'>
+            <a class='post-card' expr:href='data:post.url'>
+              <div class='post-card-img'>
+                <b:if cond='data:post.featuredImage'>
+                  <img expr:alt='data:post.title' expr:src='resizeImage(data:post.featuredImage, 640, &quot;4:3&quot;)' loading='lazy'/>
+                <b:else/>
+                  <img alt='' class='no-img' src='https://i.imgur.com/CFM0Pcr.png'/>
+                </b:if>
+              </div>
+              <div class='post-card-body'>
+                <b:if cond='data:post.labels'><span class='chip-label'><data:post.labels.first.name/></span></b:if>
+                <h2><b:eval expr='data:post.title ? data:post.title : &quot;Sin título&quot;'/></h2>
+                <p class='post-card-date'><data:post.date/></p>
+                <p class='post-card-snippet'><data:post.snippets.short/></p>
+                <span class='post-card-more'>Leer más &#8594;</span>
+              </div>
+            </a>
+          </b:loop>
+        </div>
+        <nav class='pager' aria-label='Más publicaciones'>
+          <b:if cond='data:newerPageUrl'><a class='btn btn-light' expr:href='data:newerPageUrl'>&#8592; Más nuevas</a></b:if>
+          <b:if cond='data:olderPageUrl'><a class='btn' expr:href='data:olderPageUrl'>Más antiguas &#8594;</a></b:if>
+        </nav>
+      </div>
+    </section>
+  </b:if>
+</b:includable>
+</b:widget>
+</b:section>
+
+<b:if cond='data:view.isHomepage'>
+    <!-- Llamado a la página de contacto -->
+    <section class="contact-cta">
+      <div class="container">
+        <h2>¿Querés sumarte o hacernos una consulta?</h2>
+        <p>Escribinos y te respondemos a la brevedad.</p>
+        <a class="btn btn-outline" href="/p/contactanos.html">Ir a Contacto</a>
+      </div>
+    </section>
+
+</b:if>
+</main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-about">
+        <img src="https://i.imgur.com/CFM0Pcr.png" alt="Red de Herramientas" width="220" height="50"/>
+        <div>
+          <strong>Asociación Civil Sin Fines de Lucro - IGJ N° 1981600</strong>
+          <p>Propiciamos espacios que garanticen inclusión social, cultural y de los derechos de las mujeres adultas mayores.</p>
+        </div>
+      </div>
+      <div class="social">
+        <a href="https://www.facebook.com/share/1RiPWewXqR/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#1877f2"/><path fill="#fff" d="M13.4 19v-6h2l.3-2.4h-2.3V9.1c0-.7.2-1.2 1.2-1.2h1.2V5.8c-.2 0-1-.1-1.8-.1-1.8 0-3 1.1-3 3.1v1.8H9V13h2V19z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/redherramientas?stkn=MW01cnN1eHlheHExMA==" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="6" fill="#9c27b0"/><rect x="6.5" y="6.5" width="11" height="11" rx="3.5" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="12" cy="12" r="2.7" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="16.2" cy="7.8" r="1" fill="#fff"/></svg>
+        </a>
+        <a href="https://youtube.com/@reddeherramientasentremujeres?si=X0ZCFkMKebH4L3lk" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#f44336"/><path fill="#fff" d="M10 8v8l6-4z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Volver arriba">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>
+  </button>
+
+
+<script>//<![CDATA[
+// Red de Herramientas Entre Mujeres — comportamiento del sitio
+
+// ---------- Configuración ----------
+var BLOG_URL = 'https://www.redherramientas.com';
+var CAROUSEL_LABEL = 'Carrusel'; // etiqueta de Blogger para elegir los posteos del carrusel
+var CAROUSEL_MAX = 6;
+var CAROUSEL_DELAY = 5000;      // ms entre diapositivas
+
+// Si el blog no responde, se muestran estas diapositivas
+var FALLBACK_SLIDES = [
+  {
+    title: '¿Qué es #ClicSeguroEnRED?',
+    text: ['Un nuevo espacio para adultas mayores enfocado en la prevención de estafas digitales.',
+           'Los facilitadores somos también mujeres mayores, lo que conlleva la empatía necesaria para generar un clima de seguridad. Hablamos de autonomía tecnológica que les permita dejar de pedir ayuda para las tareas cotidianas relacionadas con la tecnología, como pedir un turno médico o escanear una receta.'],
+    image: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=1200',
+    url: BLOG_URL
+  },
+  {
+    title: 'Talleres de Sensibilización',
+    text: ['Iniciamos nuestro ciclo de talleres presenciales para el buen uso del celular.',
+           'Abordamos los temores comunes, cómo configurar contraseñas seguras y reconocer mensajes engañosos por WhatsApp o SMS.'],
+    image: 'https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&q=80&w=1200',
+    url: BLOG_URL
+  }
+];
+
+// ---------- Header ----------
+function setupHeader() {
+  var header = document.querySelector('.header');
+  var nav = document.getElementById('nav');
+  var menuBtn = document.querySelector('.menu-btn');
+
+  function updateHeaderHeight() {
+    document.documentElement.style.setProperty('--header-h', header.offsetHeight + 'px');
+  }
+  updateHeaderHeight();
+  window.addEventListener('resize', updateHeaderHeight);
+
+  function closeMenu() {
+    nav.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+  }
+
+  menuBtn.addEventListener('click', function () {
+    var isOpen = nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  nav.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A') closeMenu();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeMenu();
+  });
+}
+
+// ---------- Tamaño de letra (como el menú de Lucas: Pequeña / Normal / Grande / Muy grande) ----------
+function setupFontSize() {
+  var toggle = document.querySelector('.font-size .icon-btn');
+  var menu = document.querySelector('.font-size-menu');
+  var options = menu.querySelectorAll('button');
+
+  function apply(scale) {
+    document.documentElement.style.fontSize = (scale * 100) + '%';
+    options.forEach(function (b) {
+      b.setAttribute('aria-pressed', String(b.dataset.scale === scale));
+    });
+    var header = document.querySelector('.header');
+    document.documentElement.style.setProperty('--header-h', header.offsetHeight + 'px');
+  }
+
+  var saved = '1';
+  try { saved = localStorage.getItem('font-scale') || '1'; } catch (e) {}
+  apply(saved);
+
+  toggle.addEventListener('click', function () {
+    menu.hidden = !menu.hidden;
+    toggle.setAttribute('aria-expanded', String(!menu.hidden));
+  });
+
+  options.forEach(function (b) {
+    b.addEventListener('click', function () {
+      apply(b.dataset.scale);
+      try { localStorage.setItem('font-scale', b.dataset.scale); } catch (e) {}
+      menu.hidden = true;
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.font-size')) {
+      menu.hidden = true;
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+
+// ---------- Volver arriba ----------
+function setupToTop() {
+  var btn = document.querySelector('.to-top');
+  window.addEventListener('scroll', function () {
+    btn.classList.toggle('show', window.scrollY > 500);
+  });
+  btn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+// ---------- Carrusel ----------
+function setupCarousel() {
+  var carousel = document.querySelector('.carousel');
+  if (!carousel) return;
+
+  var slidesEl = carousel.querySelector('.slides');
+  var dotsEl = carousel.querySelector('.dots');
+  var current = 0;
+  var total = 0;
+  var timer = null;
+  var paused = false;
+
+  function play() {
+    stop();
+    if (paused || total < 2) return;
+    timer = setInterval(function () { goTo(current + 1); }, CAROUSEL_DELAY);
+  }
+
+  function stop() {
+    clearInterval(timer);
+  }
+
+  function closeSlide(slide) {
+    if (!slide || !slide.classList.contains('open')) return;
+    slide.classList.remove('open');
+    slide.querySelector('.slide-more').textContent = 'Ver más';
+  }
+
+  function goTo(index) {
+    closeSlide(slidesEl.children[current]);
+    current = (index + total) % total;
+    slidesEl.style.transform = 'translateX(-' + (current * 100) + '%)';
+    for (var i = 0; i < total; i++) {
+      dotsEl.children[i].classList.toggle('active', i === current);
+      slidesEl.children[i].setAttribute('aria-hidden', String(i !== current));
+    }
+    paused = false;
+    play();
+  }
+
+  function makeSlide(item) {
+    var slide = document.createElement('article');
+    slide.className = 'slide';
+
+    var media = document.createElement('a');
+    media.className = 'slide-media';
+    media.href = item.url;
+    media.setAttribute('aria-label', 'Ver el posteo: ' + item.title);
+    var blur = document.createElement('div');
+    blur.className = 'blur';
+    blur.style.backgroundImage = 'url("' + item.image + '")';
+    var img = document.createElement('img');
+    img.src = item.image;
+    img.alt = '';
+    media.appendChild(blur);
+    media.appendChild(img);
+
+    var box = document.createElement('div');
+    box.className = 'slide-box';
+
+    var title = document.createElement('h2');
+    title.textContent = item.title;
+
+    var desc = document.createElement('p');
+    desc.className = 'slide-desc';
+    desc.textContent = item.text[0];
+
+    var full = document.createElement('div');
+    full.className = 'slide-full';
+    item.text.forEach(function (t) {
+      var p = document.createElement('p');
+      p.textContent = t;
+      full.appendChild(p);
+    });
+
+    var actions = document.createElement('div');
+    actions.className = 'slide-actions';
+
+    var more = document.createElement('button');
+    more.type = 'button';
+    more.className = 'btn slide-more';
+    more.textContent = 'Ver más';
+    more.addEventListener('click', function () {
+      var isOpen = slide.classList.toggle('open');
+      more.textContent = isOpen ? 'Ver menos' : 'Ver más';
+      paused = isOpen;
+      if (isOpen) stop(); else play();
+    });
+
+    var link = document.createElement('a');
+    link.className = 'btn btn-outline slide-link';
+    link.href = item.url;
+    link.textContent = 'Leer el posteo completo';
+
+    actions.appendChild(more);
+    actions.appendChild(link);
+    box.appendChild(title);
+    box.appendChild(desc);
+    box.appendChild(full);
+    box.appendChild(actions);
+    slide.appendChild(media);
+    slide.appendChild(box);
+    return slide;
+  }
+
+  function render(items) {
+    stop();
+    slidesEl.innerHTML = '';
+    dotsEl.innerHTML = '';
+    total = items.length;
+    current = 0;
+
+    items.forEach(function (item, i) {
+      slidesEl.appendChild(makeSlide(item));
+      var dot = document.createElement('button');
+      dot.type = 'button';
+      dot.setAttribute('aria-label', 'Ir a la actividad ' + (i + 1));
+      dot.addEventListener('click', function () { goTo(i); });
+      dotsEl.appendChild(dot);
+    });
+
+    carousel.querySelectorAll('.carousel-arrow, .dots').forEach(function (el) {
+      el.style.display = total < 2 ? 'none' : '';
+    });
+    goTo(0);
+  }
+
+  carousel.querySelector('.prev').addEventListener('click', function () { goTo(current - 1); });
+  carousel.querySelector('.next').addEventListener('click', function () { goTo(current + 1); });
+  carousel.addEventListener('mouseenter', stop);
+  carousel.addEventListener('mouseleave', play);
+
+  render(FALLBACK_SLIDES);
+
+  // Posteos del blog: primero los de la etiqueta del carrusel; si no hay, los últimos
+  loadPosts(CAROUSEL_LABEL, function (posts) {
+    if (posts.length) return render(posts);
+    loadPosts('', function (latest) {
+      if (latest.length) render(latest);
+    });
+  });
+}
+
+// Lee el feed de Blogger (JSONP: funciona dentro de Blogger y desde cualquier dominio)
+function loadPosts(label, callback) {
+  var name = 'blogFeed' + Date.now() + Math.floor(Math.random() * 1000);
+  var script = document.createElement('script');
+  var timeout = setTimeout(function () { finish([]); }, 8000);
+
+  function finish(posts) {
+    clearTimeout(timeout);
+    window[name] = function () {};
+    script.remove();
+    callback(posts);
+  }
+
+  window[name] = function (data) { finish(parseFeed(data)); };
+  script.onerror = function () { finish([]); };
+  script.src = BLOG_URL + '/feeds/posts/default' +
+    (label ? '/-/' + encodeURIComponent(label) : '') +
+    '?alt=json-in-script&max-results=' + CAROUSEL_MAX + '&callback=' + name;
+  document.head.appendChild(script);
+}
+
+function parseFeed(data) {
+  var entries = (data && data.feed && data.feed.entry) || [];
+  return entries.map(function (entry) {
+    var html = (entry.content || entry.summary || {}).$t || '';
+    var link = (entry.link || []).filter(function (l) { return l.rel === 'alternate'; })[0];
+    var image = entry.media$thumbnail ? entry.media$thumbnail.url : '';
+    if (!image) {
+      var match = html.match(/<img[^>]+src="([^"]+)"/i);
+      image = match ? match[1] : '';
+    }
+    // Las miniaturas vienen chicas (s72-c): se pide la versión de 1200px
+    image = image.replace(/\/s\d+(-[a-z0-9-]+)?\//, '/w1200/').replace(/=s\d+(-[a-z0-9-]+)?$/, '=w1200');
+
+    var text = htmlToText(html);
+    return {
+      title: entry.title.$t,
+      text: text.length ? text : [entry.title.$t],
+      image: image || 'https://i.imgur.com/CFM0Pcr.png',
+      url: link ? link.href : BLOG_URL
+    };
+  });
+}
+
+function htmlToText(html) {
+  html = html.replace(/<br\s*\/?>/gi, '\n').replace(/<\/(p|div|h\d|li)>/gi, '\n');
+  var doc = new DOMParser().parseFromString(html, 'text/html');
+  return (doc.body.textContent || '')
+    .split('\n')
+    .map(function (line) { return line.trim(); })
+    .filter(function (line) { return line; });
+}
+
+// ---------- Formulario de contacto (FormSubmit → info@redherramientas.com) ----------
+function setupContactForm() {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var msg = document.getElementById('form-msg');
+  var button = form.querySelector('button[type="submit"]');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    button.disabled = true;
+    msg.className = 'form-msg';
+    msg.textContent = 'Enviando...';
+
+    fetch('https://formsubmit.co/ajax/info@redherramientas.com', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    })
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        if (String(data.success) !== 'true') throw new Error(data.message);
+        form.reset();
+        msg.className = 'form-msg ok';
+        msg.textContent = '¡Gracias! Recibimos tu mensaje y te vamos a responder a la brevedad.';
+      })
+      .catch(function () {
+        msg.className = 'form-msg error';
+        msg.textContent = 'No pudimos enviar el mensaje. Probá de nuevo o escribinos por WhatsApp.';
+      })
+      .finally(function () {
+        button.disabled = false;
+      });
+  });
+}
+
+// ---------- Copiar datos bancarios (página de donación) ----------
+function setupCopyButtons() {
+  document.querySelectorAll('.copy-btn').forEach(function (btn) {
+    var value = document.querySelector('[data-value="' + btn.dataset.copy + '"]');
+    // Mientras el dato no esté cargado, no se muestra el botón
+    if (!value || value.classList.contains('pending')) {
+      btn.hidden = true;
+      return;
+    }
+    btn.addEventListener('click', function () {
+      navigator.clipboard.writeText(value.textContent.trim()).then(function () {
+        btn.textContent = '¡Copiado!';
+        setTimeout(function () { btn.textContent = 'Copiar'; }, 2000);
+      });
+    });
+  });
+}
+
+// ---------- Modales de datos bancarios (página de donación) ----------
+function setupModals() {
+  document.querySelectorAll('[data-modal]').forEach(function (btn) {
+    var modal = document.getElementById(btn.dataset.modal);
+    btn.addEventListener('click', function () { modal.showModal(); });
+  });
+  document.querySelectorAll('.modal').forEach(function (modal) {
+    modal.querySelector('.modal-close').addEventListener('click', function () { modal.close(); });
+    // Clic afuera del cuadro: cierra
+    modal.addEventListener('click', function (e) {
+      var r = modal.getBoundingClientRect();
+      var outside = e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom;
+      if (outside) modal.close();
+    });
+  });
+}
+
+// ---------- Inicio ----------
+setupHeader();
+setupFontSize();
+setupToTop();
+setupCarousel();
+setupContactForm();
+setupCopyButtons();
+setupModals();
+
+//]]></script>
+</body>
+</html>
