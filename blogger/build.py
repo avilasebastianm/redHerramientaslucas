@@ -39,6 +39,8 @@ def links(s):
     s = s.replace('href="contacto.html"', 'href="%s"' % CONTACT_URL)
     s = s.replace('href="donar.html"', 'href="%s"' % DONATE_URL)
     s = s.replace('src="img/', 'src="' + IMG_BASE)
+    # Links al blog sin dominio, así funcionan igual en el blog de pruebas y en producción
+    s = s.replace('href="https://www.redherramientas.com/', 'href="/')
     return s
 
 
@@ -104,7 +106,7 @@ def html_widget(wid, title, content):
 home_html = ''
 for sid, wid, title, content in home_widgets:
     home_html += f"<b:section class='home-section' id='{sid}' maxwidgets='1' showaddelement='no'>\n{html_widget(wid, title, content)}\n</b:section>\n"
-home_html += "<div class='container'>\n<b:section class='home-section' id='home-bloques' showaddelement='yes'>\n"
+home_html += "<div class='container'>\n<b:section class='home-section' id='home-contenido' showaddelement='yes'>\n"
 home_html += '\n'.join(html_widget(w, t, c) for w, t, c in home_container_widgets)
 home_html += "\n</b:section>\n</div>\n"
 
@@ -199,12 +201,18 @@ theme = f"""<?xml version="1.0" encoding="UTF-8" ?>
 <b:template-skin><![CDATA[
 body#layout .carousel, body#layout .to-top {{ display: none; }}
 body#layout .header {{ position: static; }}
+body#layout .rh-descartados {{ display: block !important; }}
+body#layout .rh-descartados::before {{ content: 'Gadgets del tema anterior: no se ven en el sitio. Se pueden borrar.'; display: block; padding: 8px; font-weight: bold; }}
 ]]></b:template-skin>
 <style>/*<![CDATA[*/
 {css}
 /*]]>*/</style>
 </head>
 <body>
+<!-- Al subir el tema, Blogger manda los gadgets del tema anterior a la primera sección que acepta gadgets: esta, que no se ve en el sitio. Se borran desde Diseño -->
+<div class='rh-descartados'>
+<b:section id='descartados' showaddelement='yes'/>
+</div>
 <a class='skip' href='#contenido'>Saltar al contenido</a>
 
 {header}
@@ -223,6 +231,7 @@ body#layout .header {{ position: static; }}
 </main>
 
 {footer}
+
 <script>//<![CDATA[
 {js}
 //]]></script>

@@ -1,7 +1,11 @@
 // Red de Herramientas Entre Mujeres — comportamiento del sitio
 
 // ---------- Configuración ----------
-var BLOG_URL = 'https://www.redherramientas.com';
+// Dentro de Blogger se usa el blog donde está instalado el tema (producción o pruebas);
+// fuera de Blogger (la propuesta en GitHub Pages) se usa producción
+var BLOG_URL = /\.blogspot\.com$|redherramientas\.com$/.test(location.hostname)
+  ? location.origin
+  : 'https://www.redherramientas.com';
 var CAROUSEL_LABEL = 'Carrusel'; // etiqueta de Blogger para elegir los posteos del carrusel
 var CAROUSEL_MAX = 6;
 var CAROUSEL_DELAY = 5000;      // ms entre diapositivas
@@ -239,13 +243,17 @@ function setupCarousel() {
   carousel.addEventListener('mouseenter', stop);
   carousel.addEventListener('mouseleave', play);
 
-  render(FALLBACK_SLIDES);
+  // Mientras cargan los posteos no se muestran flechas ni puntos
+  carousel.querySelectorAll('.carousel-arrow, .dots').forEach(function (el) {
+    el.style.display = 'none';
+  });
 
-  // Posteos del blog: primero los de la etiqueta del carrusel; si no hay, los últimos
+  // Posteos del blog: primero los de la etiqueta del carrusel; si no hay, los últimos.
+  // Las actividades de ejemplo solo se muestran si no se pudo cargar ninguno
   loadPosts(CAROUSEL_LABEL, function (posts) {
     if (posts.length) return render(posts);
     loadPosts('', function (latest) {
-      if (latest.length) render(latest);
+      render(latest.length ? latest : FALLBACK_SLIDES);
     });
   });
 }

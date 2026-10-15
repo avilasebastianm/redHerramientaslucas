@@ -14,7 +14,7 @@ Los estilos que solo se usan en Blogger (posteos, listados y ajustes) están en 
 
 ## Instalación
 1. **Copia de seguridad del tema actual:** Blogger → Tema → flecha junto a "Personalizar" → Copia de seguridad → Descargar.
-2. **Subir el tema:** Tema → flecha → Restaurar → `tema-redherramientas.xml`. Si pregunta qué hacer con los gadgets del tema anterior, se pueden borrar.
+2. **Subir el tema:** Tema → flecha → Restablecer → Subir → `tema-redherramientas.xml`. Blogger no pregunta qué hacer con los gadgets del tema anterior: los manda a la sección oculta `descartados` (arriba de todo en Diseño). No se ven, pero sus scripts siguen corriendo, así que hay que borrarlos desde Diseño (lápiz → Quitar).
 3. **Página Contacto:** Páginas → "Contactanos" → vista HTML (ícono `<>`) → reemplazar todo por el contenido de `paginas/contacto.html`.
 4. **Página Donar:** Páginas → Nueva página → título "Donar" (tiene que quedar en `/p/donar.html`) → vista HTML → pegar `paginas/donar.html`.
 5. **Carrusel:** a los posteos que tienen que aparecer en el carrusel se les agrega la etiqueta `Carrusel`. Si ninguno la tiene, se muestran los últimos.
@@ -31,6 +31,6 @@ En Blogger → **Diseño**, cada sección de la home es un gadget HTML: Quiénes
 Ojo: si después se vuelve a subir el tema, puede que Blogger conserve el contenido editado o que lo reemplace por el de `index.html`. Conviene pasar los cambios también a `index.html`.
 
 ## Pendiente
-- No probado todavía en Blogger: probarlo primero en un blog de prueba.
+- Probado en el blog de pruebas (redherramientasdev.blogspot.com).
 - Comentarios en los posteos: el tema no los muestra.
 - Las imágenes de `donar.html` son las ilustraciones provisorias que están en GitHub Pages.

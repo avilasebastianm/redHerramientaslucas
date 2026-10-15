@@ -12,6 +12,8 @@
 <b:template-skin><![CDATA[
 body#layout .carousel, body#layout .to-top { display: none; }
 body#layout .header { position: static; }
+body#layout .rh-descartados { display: block !important; }
+body#layout .rh-descartados::before { content: 'Gadgets del tema anterior: no se ven en el sitio. Se pueden borrar.'; display: block; padding: 8px; font-weight: bold; }
 ]]></b:template-skin>
 <style>/*<![CDATA[*/
 /* Red de Herramientas Entre Mujeres — estilos (diseño de la propuesta de Lucas) */
@@ -1055,9 +1057,16 @@ a.chip-label:hover { background: var(--dominant-dark); }
   .post-page { padding: 16px 0 40px; }
 }
 
+/* Sección oculta donde Blogger deja los gadgets del tema anterior */
+.rh-descartados { display: none; }
+
 /*]]>*/</style>
 </head>
 <body>
+<!-- Al subir el tema, Blogger manda los gadgets del tema anterior a la primera sección que acepta gadgets: esta, que no se ve en el sitio. Se borran desde Diseño -->
+<div class='rh-descartados'>
+<b:section id='descartados' showaddelement='yes'/>
+</div>
 <a class='skip' href='#contenido'>Saltar al contenido</a>
 
 <header class="header">
@@ -1119,7 +1128,7 @@ a.chip-label:hover { background: var(--dominant-dark); }
         <h2 class="visually-hidden">Quiénes somos</h2>
         <p>Somos una asociación civil constituida por mujeres adultas mayores que está dedicada a la lucha por la inclusión plena y el trato digno.</p>
         <p>Desde una mirada federal, horizontal y profundamente antiviejista construimos proyectos y desarrollamos propuestas que derriban estereotipos y atienden vulnerabilidades sociales, económicas, culturales y de salud.</p>
-        <a class="about-link" href="https://www.redherramientas.com/p/quienes-somos.html">&gt;&gt; Quiénes somos</a>
+        <a class="about-link" href="/p/quienes-somos.html">&gt;&gt; Quiénes somos</a>
       </div>
     </section>
 
@@ -1142,18 +1151,18 @@ a.chip-label:hover { background: var(--dominant-dark); }
             <strong>Salud y Bienestar</strong>
             <small>Actividad física y cuidado personal</small>
           </a>
-          <a class="eje eje-cultura" href="https://www.redherramientas.com/search/label/Cultura">
+          <a class="eje eje-cultura" href="/search/label/Cultura">
             <span class="eje-icon" aria-hidden="true">🎭</span>
             <strong>Educación y Cultura</strong>
             <small>Enredos de Película · #ClicSeguroEnRED</small>
             <span class="chip">Nuevo</span>
           </a>
-          <a class="eje eje-derechos" href="https://www.redherramientas.com/search/label/Derecho%20a%20tener%20derechos">
+          <a class="eje eje-derechos" href="/search/label/Derecho%20a%20tener%20derechos">
             <span class="eje-icon" aria-hidden="true">⚖️</span>
             <strong>Derechos</strong>
             <small>Derecho a tener derechos, leyes y proyectos</small>
           </a>
-          <a class="eje eje-ambiente" href="https://www.redherramientas.com/search/label/Soberan%C3%ADa%20Alimentaria">
+          <a class="eje eje-ambiente" href="/search/label/Soberan%C3%ADa%20Alimentaria">
             <span class="eje-icon" aria-hidden="true">🌱</span>
             <strong>Medio Ambiente</strong>
             <small>Incluye soberanía alimentaria · podcast de Marta</small>
@@ -1168,7 +1177,7 @@ a.chip-label:hover { background: var(--dominant-dark); }
 </b:widget>
 </b:section>
 <div class='container'>
-<b:section class='home-section' id='home-bloques' showaddelement='yes'>
+<b:section class='home-section' id='home-contenido' showaddelement='yes'>
 <b:widget id='HTML105' locked='false' title='Novedades' type='HTML' version='2' visible='true'>
   <b:widget-settings>
     <b:widget-setting name='content'><![CDATA[      <div class="separator"></div>
@@ -1336,11 +1345,16 @@ a.chip-label:hover { background: var(--dominant-dark); }
   </button>
 
 
+
 <script>//<![CDATA[
 // Red de Herramientas Entre Mujeres — comportamiento del sitio
 
 // ---------- Configuración ----------
-var BLOG_URL = 'https://www.redherramientas.com';
+// Dentro de Blogger se usa el blog donde está instalado el tema (producción o pruebas);
+// fuera de Blogger (la propuesta en GitHub Pages) se usa producción
+var BLOG_URL = /\.blogspot\.com$|redherramientas\.com$/.test(location.hostname)
+  ? location.origin
+  : 'https://www.redherramientas.com';
 var CAROUSEL_LABEL = 'Carrusel'; // etiqueta de Blogger para elegir los posteos del carrusel
 var CAROUSEL_MAX = 6;
 var CAROUSEL_DELAY = 5000;      // ms entre diapositivas
@@ -1578,13 +1592,17 @@ function setupCarousel() {
   carousel.addEventListener('mouseenter', stop);
   carousel.addEventListener('mouseleave', play);
 
-  render(FALLBACK_SLIDES);
+  // Mientras cargan los posteos no se muestran flechas ni puntos
+  carousel.querySelectorAll('.carousel-arrow, .dots').forEach(function (el) {
+    el.style.display = 'none';
+  });
 
-  // Posteos del blog: primero los de la etiqueta del carrusel; si no hay, los últimos
+  // Posteos del blog: primero los de la etiqueta del carrusel; si no hay, los últimos.
+  // Las actividades de ejemplo solo se muestran si no se pudo cargar ninguno
   loadPosts(CAROUSEL_LABEL, function (posts) {
     if (posts.length) return render(posts);
     loadPosts('', function (latest) {
-      if (latest.length) render(latest);
+      render(latest.length ? latest : FALLBACK_SLIDES);
     });
   });
 }

@@ -156,3 +156,6 @@ a.chip-label:hover { background: var(--dominant-dark); }
   .post-title, .list-title { font-size: 1.7rem; }
   .post-page { padding: 16px 0 40px; }
 }
+
+/* Sección oculta donde Blogger deja los gadgets del tema anterior */
+.rh-descartados { display: none; }
